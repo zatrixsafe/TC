@@ -13,7 +13,7 @@ class Similars:
 			l.append(x%10)
 			x /= 10
 		l = sorted(l)
-		return l
+		return list(set(l))
 		
 	def maxsim(self, L, R):
 		f_ans = 0
@@ -23,12 +23,13 @@ class Similars:
 			t = self.getList(i)
 			l.append(t)
 		s = sorted(l)
+		print s
 		for i in range(len(s)-1):
 			ans = self.getNum(s[i],s[i+1])
 			if f_ans < ans:
 				f_ans = ans
 		return f_ans
 x = Similars()
-L = 1
-R = 1234
+L = 998
+R = 1013
 print x.maxsim(L,R)
