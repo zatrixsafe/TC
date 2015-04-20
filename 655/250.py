@@ -18,3 +18,6 @@ x = ("W??W",)
 print s. ableToDraw(x)
 			
 
+
+
+###
